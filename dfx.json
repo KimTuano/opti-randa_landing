@@ -1,19 +1,19 @@
 {
-    "canisters": {
-        "opti_randa": {
-            "frontend": {
-                "entrypoint": "src/HomePage.html"
-            },
-            "source": ["src"],
-            "type": "assets"
-        }
-    },
-    "dfx": "0.17.0",
-    "version": 1,
-    "networks": {
-        "local": {
-            "bind": "0.0.0.0:8000",
-            "type": "ephemeral"
-        }
+  "canisters": {
+    "opti_randa": {
+      "frontend": {
+        "entrypoint": "src/index.html"
+      },
+      "source": ["src"],
+      "type": "assets"
     }
+  },
+  "dfx": "0.17.0",
+  "version": 1,
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  }
 }
