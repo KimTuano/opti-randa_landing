@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/OrderPage.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<title>Cliq and Dine</title>
+</head>
+<body>	
+	<header>
+        <div class="popup" id="popup">
+            <img src="images/404-tick.png">
+            <h2>Confirm</h2>
+            <p>Before we proceed kindly check the details that you have ordered.</p>
+            <div class="list-ordered">
+                <div class="order-summary">
+                    <div id="listOrder"></div>
+
+                </div>
+            </div>
+            <div class="conbtn">
+                <div class="back">
+                    <a href="#" type="button" onclick="closePopup()">BACK</a>
+                </div>
+                <div class="proceed">
+                    <a href="CheckoutPage.html" type="button" onclick="closePopup()">PROCEED</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navigation2">
+            <img src="images/CND2.png " alt="" class="logoCND">
+            <a href="">
+                <span>Cliq and Dine</span>
+            </a>
+        </nav>
+
+        <div class="dropdown1">
+            <div class="select1">
+                <nav>
+                    <a href="#"><i class="fa-solid fa-map-location-dot"></i><span> Hotel Name <span>SPCF RESORTS WORLD</span></span></li></a>
+                </nav>
+            </div>
+            <ul class="selecthotel">
+                <div class="innershell">
+					<div class="wrapper">
+                        <div class="search-input">
+                            <input type="text" placeholder="SPCF RESORTS WORLD">
+                            <div class="autocom-box">
+                                <li>SPCF RESORTS WORLD</li>
+                                <li>Sample Hotel</li>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                        </div>
+                        <div class="order-now">
+                            <a href=""><span>Order Now!</span></a>
+                        </div>
+                    </div>
+                </div>    
+			</ul>
+        </div>
+
+        <div class="shopping">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="quantity">0</span>
+        </div>
+
+		<div class="dropdown">
+			<div class="select">
+				<span class="lingua"><ion-icon name="globe-sharp"></ion-icon></span>
+	    		<div class="caret"></div>
+			</div>
+			<ul class="selectlingua">
+				<li>English</li>
+				<li>Tagalog</li>
+				<li>Español</li>
+				<li>日本語</li>
+			</ul>
+		</div>
+	</header>
+
+        <div class="categ">
+            <h2>Main Dish</h2>
+        </div>
+        <div class="container">
+            <div id="listProduct">
+
+            </div>
+        
+        <div class="categ2">
+            <h2>Side Dish</h2>
+        </div>
+        <div class="container2">
+            <div id="listProduct2">
+
+            </div>
+
+        <div class="categ3">
+            <h2>Beverages</h2>
+        </div>
+        <div class="container3">
+            <div id="listProduct3">
+
+            </div>
+        
+        <div class="categ4">
+            <h2>Add Ons</h2>
+        </div>
+        <div class="container4">
+            <div id="listProduct4">
+ 
+            </div>
+
+    <div class="cart">
+        <div class="title-car">
+            <h2>Cart</h2>
+        </div>
+        <div id="listCart"></div>
+        <div class="buttons">
+            <div class="close">CLOSE</div>
+            <div class="checkout">
+                <a href="#" onclick="openPopup()">
+                    CHECKOUT
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="Upperhead">
+            <nav class="navigation3">
+                <img src="CND2.png" alt="" class="logoCND">
+                <a href="">
+                    <span>Cliq and Dine</span>
+                </a>
+            </nav>
+            <ul class="social-icons">
+                <li>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="lowerhead">
+            <div class="copyright">
+                <p>© 2023 Cliq and Dine from SPCF</p>
+                <p>For customer support,
+                    <br>please reach out to us through our in-app
+                    <br>customer support chat feature on Help Center.
+                </p>
+            </div>
+            <div class="link-foot">
+                <ul>
+                    <li><a href=""><span>Help Center</span></a></li>
+                    <li><a href=""><span>Terms and Conditions</span></a></li>
+                    <li><a href=""><span>Privacy Policy</span></a></li>
+                    <li><a href=""><span>Security</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><span>CND Easy Pay</span></a></li>
+                    <li><a href=""><span>CND Deals</span></a></li>
+                    <li><a href=""><span>CND Magazine</span></a></li>
+                    <li><a href=""><span>Download CND APP</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><span>Certified Partner</span></a></li>
+                    <li></li><a href=""><span>All Hotels</span></a></li>
+                </ul>
+            </div>
+            <div class="places">
+                <ul>
+                    <li><a href=""><span>Luzon</span></a></li>
+                </ul>
+                <h4>|</h4>
+                <ul>
+                    <li><a href=""><span>Visayas</span></a></li>
+                </ul>
+                <h4>|</h4>
+                <ul>
+                    <li><a href=""><span>Mindanao</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let popup = document.getElementById("popup");
+        let blurContainer = document.querySelector(".blur");
+        
+        function openPopup() {
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateOrderDetails();
+          popup.classList.add("open-popup");
+          blurContainer.classList.add("blurry");
+        }
+        
+        function closePopup() {
+          popup.classList.remove("open-popup");
+          blurContainer.classList.remove("blurry");
+        }
+        
+        </script>
+
+<script src="js/search.js"></script>
+<script src="js/suggest.js"></script>
+<script src="js/OrderPage.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+const product = [
+    {
+        "id": 1,
+        "name": "Bulalo",
+        "price": 350,
+        "image": "images/bulalo.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Chicken Curry",
+        "price": 250,
+        "image": "images/Chicken-curry.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Sisig",
+        "price": 150,
+        "image": "images/sisig.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Fried Chicken",
+        "price": 170,
+        "image": "images/fried-chicken.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Pancake",
+        "price": 90,
+        "image": "images/pancake.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Tapsilog",
+        "price": 120,
+        "image": "images/tapsilog.jpg"
+    }
+    
+];

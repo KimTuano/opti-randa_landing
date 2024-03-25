@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/OrderPage.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<title>Cliq and Dine</title>
+</head>
+<body>
+    
+	<header>
+        <div class="popup" id="popup2">
+            <img src="images/404-tick.png">
+            <h2>Thank You!</h2>
+            <p>Please confirm whether you have inputted your complete details.</p>
+            <div class="final-process">
+                <div class="info4">
+                    <div class="full-name">Name: </div>
+                    <div class="phone-num">Phone: </div>
+                    <div class="email">Email: </div>
+                    <div class="floornum">Floor: </div>
+                    <div class="unitnum">Unit No.: </div>
+                    <div class="notes">Note: </div>
+                </div>
+                <div class="totals3">
+
+                </div>
+            </div>
+            <div class="conbtn">
+                <div class="back">
+                    <a href="#" type="button" onclick="closePopup2()">BACK</a>
+                </div>
+                <div class="proceed">
+                    <a href="WaitingPage.html" type="button" onclick="closePopup2()">PROCEED</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navigation2">
+            <img src="images/CND2.png " alt="" class="logoCND">
+            <a href="">
+                <span>Cliq and Dine</span>
+            </a>
+        </nav>
+
+        <div class="dropdown1">
+            <div class="select1">
+                <nav>
+                    <a href="#"><i class="fa-solid fa-map-location-dot"></i><span> Hotel Name <span>SPCF RESORTS WORLD</span></span></li></a>
+                </nav>
+            </div>
+            <ul class="selecthotel">
+                <div class="innershell">
+					<div class="wrapper">
+                        <div class="search-input">
+                            <input type="text" placeholder="SPCF RESORTS WORLD">
+                            <div class="autocom-box">
+                                <li>SPCF RESORTS WORLD</li>
+                                <li>Sample Hotel</li>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                        </div>
+                        <div class="order-now">
+                            <a href=""><span>Order Now!</span></a>
+                        </div>
+                    </div>
+                </div>    
+			</ul>
+        </div>
+
+		<div class="dropdown">
+			<div class="select">
+				<span class="lingua"><ion-icon name="globe-sharp"></ion-icon></span>
+	    		<div class="caret"></div>
+			</div>
+			<ul class="selectlingua">
+				<li>English</li>
+				<li>Tagalog</li>
+				<li>Español</li>
+				<li>日本語</li>
+			</ul>
+		</div>
+	</header>
+
+<div class="blur">
+    <div class="returnshop">
+        <a href="OrderPage.Html"><i class="fa-solid fa-arrow-left"></i><span>KEEP SHOPPING</span></a>
+    </div>
+
+    <div class="prod-container">
+        <div class="returnCart">
+            <h1>LIST PRODUCT IN CART</h1>
+            <div class="list2">
+                <div class="items2">
+
+                </div>
+                <div class="totals2">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="checkout" class="sec1">
+        <div class="containerCO">
+            <h1>CHECKOUT</h1>
+
+            <form action="#" class="form" onsubmit="return validateForm()">
+                <h2>FILL UP DETAILS</h2>
+        
+                <!-- Last Name -->
+                <div class="input-box">
+                    <label for="lastName">LAST NAME:</label>
+                    <input id="lastName" type="text" placeholder="Javier" required/>
+                    <div class="error-message" id="lastNameError"></div>
+                </div>
+        
+                <!-- First Name -->
+                <div class="input-box">
+                    <label for="firstName">FIRST NAME:</label>
+                    <input id="firstName" type="text" placeholder="Anjel" required/>
+                    <div class="error-message" id="firstNameError"></div>
+                </div>
+        
+                <!-- Phone Number -->
+                <div class="input-box">
+                    <label for="phone">PHONE NUMBER:</label>
+                    <input id="phone" type="tel" placeholder="9xx-xxx-xxxx" required pattern="[0-9]{10}"/>
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+        
+                <!-- Email -->
+                <div class="input-box">
+                    <label for="email">EMAIL:</label>
+                    <input id="email" type="text" placeholder="user@example.com" required />
+                    <div class="error-message" id="emailError"></div>
+                </div>
+        
+                <!-- Unit to Deliver -->
+                <div class="divcolumn">
+                    <div class="UTD">
+                        <h2>UNIT TO DELIVER</h2>
+                    </div>
+                    <!-- Floor -->
+                    <div class="input-box">
+                        <label for="floor">FLOOR:</label>
+                        <input id="floor" type="text" placeholder="Floor 1" required/>
+                        <div class="error-message" id="floorError"></div>
+                    </div>
+                    <!-- Unit No. -->
+                    <div class="input-box">
+                        <label for="unitNo">UNIT NO.:</label>
+                        <input id="unitNo" type="text" placeholder="Unit A" required/>
+                        <div class="error-message" id="unitNoError"></div>
+                    </div>
+                </div>
+        
+                <!-- Comments -->
+                <div class="divcolumn2">
+                    <div class="com">
+                        <h2>NOTE:</h2>
+                        <p>If you want to leave a message or if there's something you want
+                            to exclude from your order, e.g., I have a peanut allergy. (Optional)
+                        </p>
+                    </div>
+                    <div class="input-box">
+                        <textarea id="message" cols="69" rows="8" placeholder="How can we help you?"></textarea>
+                    </div>
+                </div>
+        
+                <!-- Submit Button -->
+                <div class="input-box">
+                    <input type="submit" style="background-color: #4f055e; color: #fff; cursor: pointer;" value="Confirm"/>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="Upperhead">
+            <nav class="navigation3">
+                <img src="CND2.png" alt="" class="logoCND">
+                <a href="">
+                    <span>Cliq and Dine</span>
+                </a>
+            </nav>
+            <ul class="social-icons">
+                <li>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="lowerhead">
+            <div class="copyright">
+                <p>© 2023 Cliq and Dine from SPCF</p>
+                <p>For customer support,
+                    <br>please reach out to us through our in-app
+                    <br>customer support chat feature on Help Center.
+                </p>
+            </div>
+            <div class="link-foot">
+                <ul>
+                    <li><a href=""><span>Help Center</span></a></li>
+                    <li><a href=""><span>Terms and Conditions</span></a></li>
+                    <li><a href=""><span>Privacy Policy</span></a></li>
+                    <li><a href=""><span>Security</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><span>CND Easy Pay</span></a></li>
+                    <li><a href=""><span>CND Deals</span></a></li>
+                    <li><a href=""><span>CND Magazine</span></a></li>
+                    <li><a href=""><span>Download CND APP</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><span>Certified Partner</span></a></li>
+                    <li></li><a href=""><span>All Hotels</span></a></li>
+                </ul>
+            </div>
+            <div class="places">
+                <ul>
+                    <li><a href=""><span>Luzon</span></a></li>
+                </ul>
+                <h4>|</h4>
+                <ul>
+                    <li><a href=""><span>Visayas</span></a></li>
+                </ul>
+                <h4>|</h4>
+                <ul>
+                    <li><a href=""><span>Mindanao</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+
+function validateForm() {
+            // Get form inputs
+            var lastName = document.getElementById('lastName').value;
+            var firstName = document.getElementById('firstName').value;
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+            var floor = document.getElementById('floor').value;
+            var unitNo = document.getElementById('unitNo').value;
+            var message = document.getElementById('message').value;
+
+            // Validate Last Name
+            var lastNameError = document.getElementById('lastNameError');
+            if (lastName === '') {
+                lastNameError.textContent = 'Please enter your last name.';
+                return false;
+            } else {
+                lastNameError.textContent = '';
+            }
+
+            // Validate First Name
+            var firstNameError = document.getElementById('firstNameError');
+            if (firstName === '') {
+                firstNameError.textContent = 'Please enter your first name.';
+                return false;
+            } else {
+                firstNameError.textContent = '';
+            }
+
+            // Validate Phone Number
+            var phoneError = document.getElementById('phoneError');
+            if (phone === '') {
+                phoneError.textContent = 'Please enter your phone number.';
+                return false;
+            } else {
+                phoneError.textContent = '';
+            }
+
+            // Validate Email
+            var emailError = document.getElementById('emailError');
+            if (email === '') {
+                emailError.textContent = 'Please enter your email.';
+                return false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            // Validate Floor
+            var floorError = document.getElementById('floorError');
+            if (floor === '') {
+                floorError.textContent = 'Please enter the floor.';
+                return false;
+            } else {
+                floorError.textContent = '';
+            }
+
+            // Validate Unit No.
+            var unitNoError = document.getElementById('unitNoError');
+            if (unitNo === '') {
+                unitNoError.textContent = 'Please enter the unit number.';
+                return false;
+            } else {
+                unitNoError.textContent = '';
+            }
+
+            sessionStorage.setItem('fullName', firstName + ' ' + lastName);
+            sessionStorage.setItem('phone', phone);
+            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('floor', floor);
+            sessionStorage.setItem('unitNo', unitNo);
+            sessionStorage.setItem('message', message);
+
+            // Show the popup if the form is filled up completely
+            openPopup2();
+
+        document.querySelector('.full-name').textContent = 'Name: ' + firstName + ' ' + lastName;
+        document.querySelector('.phone-num').textContent = 'Phone: ' + phone;
+        document.querySelector('.email').textContent = 'Email: ' + email;
+        document.querySelector('.floornum').textContent = 'Floor: ' + floor;
+        document.querySelector('.unitnum').textContent = 'Unit No.: ' + unitNo;
+        document.querySelector('.notes').textContent = 'Notes: ' + message;
+
+            return false; // Prevent default form submission
+        }
+
+let popup = document.getElementById("popup2");
+let blurContainer = document.querySelector(".blur");
+        
+function openPopup2() {
+    popup.classList.add("open-popup");
+    blurContainer.classList.add("blurry");
+}
+
+function closePopup2() {
+  popup.classList.remove("open-popup");
+  blurContainer.classList.remove("blurry");
+}
+
+</script>
+
+<script src="js/search.js"></script>
+<script src="js/suggest.js"></script>
+<script src="js/CheckoutPage.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
